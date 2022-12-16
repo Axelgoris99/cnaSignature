@@ -38,12 +38,73 @@
 			Email nécessaire seulement si votre mail est différent de prenom.nom
 			<input type="email" bind:value={email} />
 		</div>
-		<div id="signature" class="signature">
+	</div>
+	<div id="signature">
+		<table style="font-family:&quot;Times New Roman&quot;;color: #0F2748;">
+			<tbody style="font-family:&quot;Titillium Web&quot;,Arial,sans-serif"
+				><tr
+					><td rowspan="8" width="140" valign="top"
+						><a
+							href="https://www.centraliens-nantes.org/"
+							style="color:rgb(17,85,204)"
+							target="blank"
+							><img
+								src="https://ci5.googleusercontent.com/proxy/EdHi45teqg6RYjuZWqBt8Ui0z42SuWZvnHRKCT7xYskWy13gsi0pqfvn6_WXUApItCrz5MPLsxvaJLfTTJUtx3HupcMfLobqrvwtjyglxaMXnh0B4vwfYhR_0uE06Q=s0-d-e1-ft#https://www.centraliens-nantes.org/medias/image/16232021165c07e85253b25.png"
+								alt="Centrale Nantes Alumni |"
+								width="130"
+							/></a
+						></td
+					><td
+						>{#if prenom || nom}<table style="font-family:&quot;Times New Roman&quot;">
+								<tbody style="font-family:&quot;Titillium Web&quot;,Arial,sans-serif"
+									><tr><td style="font-size:medium;font-weight:900">{fullName}</td></tr><tr
+									/></tbody
+								>
+							</table>{/if}
+						{#if role}<i>&nbsp;{role}</i>{/if}
+						{#if work}<br />&nbsp;{work}<br />{/if}</td
+					></tr
+				>
+				{#if (prenom || nom || job || roleCna) && ((prenom && nom) || promotion || phone || email)}<tr
+						><td
+							><img
+								src="https://ci5.googleusercontent.com/proxy/nyh4uQGLFFuxSIZGFJxvcDcBu5z-GFtT9h6SxuNLWYCv2k8H6LcsqeUIxKOQ4WkNST_qG6Rqv5OVx7JxWZDMpYIPHCXT2-vcUdH4HFtCj4YcUQvg9Qg5=s0-d-e1-ft#https://www.ec-nantes.fr/medias/photo/v_tiret-sign_1492585977585-png"
+								alt="----"
+								height="12"
+							/></td
+						></tr
+					>{/if}<tr>
+					<td
+						>{#if promotion}&nbsp;Promotion E{promotion}<br />{/if}
+						{#if phone}&nbsp;<a href="tel:{phone}}" style="color:rgb(14,39,72)" target="blank">
+								T&nbsp;:&nbsp;{phone}</a
+							><br />{/if}
+						{#if email}&nbsp;<a
+								href="mailto:florian.bartocci@centraliens-nantes.com"
+								style="color:rgb(14,39,72);font-weight:bold"
+								target="blank"
+							>
+								{email}@centraliens-nantes.com</a
+							><br />
+						{:else if prenom || nom}&nbsp;<a
+								href="mailto:{prenom}.{nom}@centraliens-nantes.com"
+								style="color:rgb(14,39,72);font-weight:bold"
+								target="blank"
+							>
+								{prenom.toLowerCase()}.{nom.toLowerCase()}@centraliens-nantes.com</a
+							>
+						{/if}
+					</td></tr
+				></tbody
+			>
+		</table>
+	</div>
+	<!-- <div id="signature2" class="signature">
 			<a href="https://www.centraliens-nantes.org/" target="blank"
 				><img src={image} alt="" width="130px" /></a
 			>
 			<div class="text">
-				{#if fullName}<p class="prenom">
+				{#if prenom || nom}<p class="prenom">
 						{fullName}
 					</p>{/if}
 				{#if roleCna}<i class="role">{role}</i>{/if}
@@ -56,7 +117,11 @@
 					/>{/if}
 				{#if promotion}<p class="promotion">Promotion E{promotion}</p>{/if}
 				{#if phone}<p><a href="tel:{phone}" class="phone">T : {phone}</a></p>{/if}
-				{#if email}<p><a href="mailto:{email}" class="email">{email}</a></p>
+				{#if email}<p>
+						<a href="mailto:{email}@centraliens-nantes.com" class="email"
+							>{email}@centraliens-nantes.com</a
+						>
+					</p>
 				{:else if prenom && nom}
 					<p>
 						<a href="mailto:{prenom}.{nom}@centraliens-nantes.com" class="email"
@@ -64,8 +129,7 @@
 						>
 					</p>{/if}
 			</div>
-		</div>
-	</div>
+		</div>-->
 
 	<button
 		on:click={() => {
@@ -123,31 +187,9 @@
 		align-items: center;
 		margin: 20px;
 	}
-	.signature {
+	/* .signature {
 		display: flex;
 		flex-direction: row;
 		align-items: top;
-	}
-	.text {
-		margin-left: 10px;
-		display: flex;
-		flex-direction: column;
-		align-items: left;
-		color: var(--blue);
-		font-family: 'Times New Roman', Times, serif;
-	}
-	.prenom {
-		font-family: 'Titillium Web', sans-serif;
-		font-weight: 900;
-	}
-	.phone {
-		font-family: 'Titillium Web', sans-serif;
-		font-weight: 400;
-		color: var(--blue);
-	}
-	.email {
-		font-family: 'Titillium Web', sans-serif;
-		font-weight: 700;
-		color: var(--blue);
-	}
+	} */
 </style>
