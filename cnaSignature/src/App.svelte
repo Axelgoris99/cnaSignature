@@ -1,4 +1,4 @@
-<script ts>
+<script>
 	let image =
 		'https://ci5.googleusercontent.com/proxy/EdHi45teqg6RYjuZWqBt8Ui0z42SuWZvnHRKCT7xYskWy13gsi0pqfvn6_WXUApItCrz5MPLsxvaJLfTTJUtx3HupcMfLobqrvwtjyglxaMXnh0B4vwfYhR_0uE06Q=s0-d-e1-ft#https://www.centraliens-nantes.org/medias/image/16232021165c07e85253b25.png';
 	let prenom = '';
@@ -19,7 +19,7 @@
 	$: role = capitalizeFirstLetter(roleCna);
 	$: work = capitalizeFirstLetter(job);
 </script>
-
+<main>
 <div class="main">
 	<h1>Signature CNA</h1>
 	<h2>Informations</h2>
@@ -148,7 +148,7 @@
 	>
 	Plus qu'à la coller !
 </div>
-
+</main>
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap');
 
