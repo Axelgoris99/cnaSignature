@@ -25,7 +25,7 @@
 	<h2>Informations</h2>
 	<p>
 		Vous pouvez modifier les informations ci-dessous pour obtenir votre signature CNA.<br />
-		Vous pouvez ensuite copier le code HTML et le coller dans votre signature.
+		Vous pouvez ensuite le copier et le coller dans votre signature.
 	</p>
 	<div class="inside">
 		<div class="input">
