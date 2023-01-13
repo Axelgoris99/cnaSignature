@@ -101,18 +101,18 @@
                   T&nbsp;:&nbsp;{phone}</a
                 ><br />{/if}
               {#if email}&nbsp;<a
-                  href="mailto:florian.bartocci@centraliens-nantes.com"
+                  href="mailto:florian.bartocci@centraliens-nantes.org"
                   style="color:rgb(14,39,72);font-weight:bold"
                   target="blank"
                 >
-                  {email}@centraliens-nantes.com</a
+                  {email}@centraliens-nantes.org</a
                 ><br />
               {:else if prenom && nom}&nbsp;<a
-                  href="mailto:{prenom}.{nom}@centraliens-nantes.com"
+                  href="mailto:{prenom}.{nom}@centraliens-nantes.org"
                   style="color:rgb(14,39,72);font-weight:bold"
                   target="blank"
                 >
-                  {prenom.toLowerCase()}.{nom.toLowerCase()}@centraliens-nantes.com</a
+                  {prenom.toLowerCase()}.{nom.toLowerCase()}@centraliens-nantes.org</a
                 >
               {/if}
             </td></tr
