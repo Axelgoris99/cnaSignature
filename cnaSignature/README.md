@@ -42,6 +42,11 @@ If you have state that's important to retain within a component, consider creati
 ```js
 // store.js
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
+
+**Pourquoi j'ai utilisé des styles plutot que des classes ?**
+Parceque les signatures gmail, c'est pourrie.
+**Pourquoi j'ai utilisé des tableaux plutot que des flexbox ?**
+Parceque les signbatures gmail, c'est pourrie.

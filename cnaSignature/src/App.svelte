@@ -9,6 +9,7 @@
   let phone = "";
   let email = "";
   let promote = false;
+  let promotePlusPlus = false;
   /**
    * @param {string} string
    */
@@ -48,6 +49,16 @@
           name="promote"
           on:change={(e) => (promote = e.target.checked)}
         />
+        {#if promote}
+          Si vous souhaitez promouvoir Centrale Nantes Alumni encore plus,
+          cocher cette case
+          <input
+            type="checkbox"
+            id="promotePlusPlus"
+            name="promotePlusPlus"
+            on:change={(e) => (promotePlusPlus = e.target.checked)}
+          />
+        {/if}
       </div>
     </div>
     <div id="signature">
@@ -55,17 +66,28 @@
         <tbody style="font-family:&quot;Titillium Web&quot;,Arial,sans-serif"
           ><tr
             ><td rowspan="8" width="140" valign="top"
-              ><a
-                href="https://www.centraliens-nantes.org/"
-                style="color:rgb(17,85,204)"
-                target="blank"
+              ><a href="https://www.centraliens-nantes.org/" target="blank"
                 ><img
                   src="https://ci5.googleusercontent.com/proxy/EdHi45teqg6RYjuZWqBt8Ui0z42SuWZvnHRKCT7xYskWy13gsi0pqfvn6_WXUApItCrz5MPLsxvaJLfTTJUtx3HupcMfLobqrvwtjyglxaMXnh0B4vwfYhR_0uE06Q=s0-d-e1-ft#https://www.centraliens-nantes.org/medias/image/16232021165c07e85253b25.png"
                   alt="Centrale Nantes Alumni |"
                   width="130"
                 /></a
-              ></td
-            ><td
+              >
+              {#if promote}
+                <a
+                  href="https://www.centraliens-nantes.org/registration/member/alumni"
+                  target="blank"
+                  style=" 
+                  display:block;
+                  width:140px;
+                  text-decoration: none;
+                  position:relative;position: relative; 
+                  text-align:center;margin:auto;font-family:&quot;Titillium Web&quot;,Arial,sans-serif; background-color: rgb(250, 181, 0); color:rgb(14,39,72); border:1px solid grey; border-radius:0px"
+                  >J'adhère
+                </a>
+              {/if}
+            </td>
+            <td
               >{#if prenom || nom}<table
                   style="font-family:&quot;Times New Roman&quot;"
                 >
@@ -120,7 +142,7 @@
         </tbody>
       </table>
       <div>
-        {#if promote}
+        {#if promotePlusPlus}
           <tr>
             <td
               ><i
@@ -199,6 +221,7 @@
 		</div>-->
 
     <button
+      style="margin: 1rem 0;"
       on:click={() => {
         if (typeof ClipboardItem === "undefined") {
           alert(
@@ -224,7 +247,7 @@
 
   :root {
     --blue: #0e2748;
-    --yellow: #fab500;
+    --yellow: rgb(250, 181, 0);
   }
   h1 {
     color: var(--blue);
